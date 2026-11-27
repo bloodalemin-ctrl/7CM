@@ -1,0 +1,47 @@
+<div class="mb-3"></div>
+<div class="container">
+    <div class="card border-info">
+        <div class="card-header text-center text-primary">
+            <h1 class="card-title">
+                {{ titulo }}
+            </h1>
+        </div>
+        <div class="card-body text-primary">
+            <form>
+                <div class="mb-3">
+                    <label for="" class="form-label">Id de la frase</label>
+                    <input 
+                    type="number"
+                    class="form-control"
+                    id="idFrase"
+                    name="idFrase"
+                    [(ngModel)]="laFrase().idFrase"
+                    />
+                </div>
+                <div class="mb-3">
+                    <label for="" class="form-label">Texto de la frase</label>
+                    <input 
+                    type="text"
+                    class="form-control"
+                    id="textoFrase"
+                    name="textoFrase"
+                    [(ngModel)]="laFrase().textoFrase"
+                    />
+                </div>
+                <div class="mb-3">
+                    <label for="" class="form-label">Autor de la frase</label>
+                    <input 
+                    type="text"
+                    class="form-control"
+                    id="autorFrase"
+                    name="autorFrase"
+                    [(ngModel)]="laFrase().autorFrase"
+                    />
+                </div>
+                <div class="mb-3">
+                    <button class="btn btn-outline-success form-control">Actualizar</button>
+                    <button class="btn btn-outline-primary form-control">Registrar</button>
+                </div>
+            </form>
+        </div>
+    </div>

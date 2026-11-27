@@ -1,0 +1,33 @@
+<div class="mb-3"></div>
+<div class="container">
+    <div class="card border-success">
+        <div class="card-header text-primary">
+            <h1 class="card-title">
+                {{ titulo }}
+            </h1>
+        </div>
+        <div class="card-header text-primary">
+            <form>
+                <div class="mb-3">
+                    <label for="numeroUno">Número 1</label>
+                    <input 
+                    type="number" 
+                    name="numeroUno"
+                    id="txtNumeroUno" 
+                    step="1"
+                    min="1"
+                    max="1000"
+                    required
+                    class="form-control"
+                    [(ngModel)]="numeroUno"
+                    />
+                </div>
+                <button class="form-control" (click)="convertirACelsius()">Calcular</button>
+            </form>
+        </div>
+        <div class="card-footer text-center text-success">
+
+            
+        </div>
+    </div>
+</div>

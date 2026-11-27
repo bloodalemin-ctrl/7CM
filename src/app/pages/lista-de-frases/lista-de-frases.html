@@ -1,0 +1,43 @@
+<div class="mb-3"></div>
+<div class="continer">
+    <div class="card border-sucess">
+        <div class="card-header text-center text-primary">
+            <h1 class="card-title">
+
+            </h1>
+        </div>
+        <div class="card-body text primary">
+            <table class="table-stiped">
+                <thead>
+                    <tr>
+                        <th>id</th>
+                        <th>texto de la frase</th>
+                        <th>Autor de la frase</th>
+                        <th colspan="2">acciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @for (laFraseActual of listaFrases(); 
+                    track laFraseActual.idFrase){ 
+                    <tr>
+                        <td>{{ laFraseActual.idFrase }}</td>
+                        <td>{{ laFraseActual.textoFrase }}</td>
+                        <td>{{ laFraseActual.autorFrase }}</td>
+                        <td>
+                            <button class="btn btn-outline-danger" (click)="eliminarFrase(laFraseActual)">Eliminar</button>
+                        </td>
+                        <td>
+                            <button class="btn btn-outline-success"
+                            [routerLink]="['/fraseForm', laFraseActual.idFrase]">Actualizar</button>
+                    </tr>
+                }
+                @empty {
+                    <tr>
+                        <td colspan="5">No hay frases registradas</td>
+                    </tr>
+                }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
